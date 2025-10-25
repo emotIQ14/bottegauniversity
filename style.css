@@ -1,0 +1,194 @@
+/*
+ * Stylesheet for the CodePen home page replica.
+ *
+ * This file defines the layout and styling for a simple
+ * two‑column landing page modeled after the CodePen.io home page. It
+ * includes a top navigation bar, a hero section with text and a
+ * preview image, and a bottom informational strip. Colors and font
+ * sizes have been chosen to approximate the look and feel of the
+ * original page, while keeping the CSS clean and readable.
+ */
+
+/* Global resets */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: linear-gradient(180deg, #2f3340, #0f111b);
+  color: #ffffff;
+  line-height: 1.5;
+}
+
+/* Navigation bar */
+.navbar {
+  background: #000000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 32px;
+}
+.nav-left {
+  display: flex;
+  align-items: center;
+}
+.logo {
+  height: 42px;
+  margin-right: 24px;
+}
+.nav-links {
+  display: flex;
+  align-items: center;
+}
+.nav-links .explore {
+  color: #eab308; /* yellow accent for the "EXPLORE" label */
+  font-size: 0.75rem;
+  font-weight: 700;
+  margin-right: 8px;
+  letter-spacing: 0.05em;
+}
+.nav-links ul {
+  list-style: none;
+  display: flex;
+  gap: 18px;
+  font-weight: 600;
+}
+.nav-links ul li a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: color 0.2s ease;
+}
+.nav-links ul li a:hover {
+  color: #84cc16; /* subtle green on hover */
+}
+.down {
+  font-size: 0.6rem;
+  margin-left: 3px;
+}
+
+/* Right side of the navbar */
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.nav-right a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+.create-button {
+  background: #18181b;
+  padding: 7px 14px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+}
+.signup-button {
+  background: #0a0a0b;
+  border: 1px solid #3f3f46;
+  padding: 7px 16px;
+  border-radius: 4px;
+}
+.login {
+  padding: 0 4px;
+}
+
+/* Hero section */
+.hero {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding: 60px 80px;
+}
+.hero-left {
+  flex: 1 1 50%;
+  max-width: 540px;
+}
+.hero-left h1 {
+  font-size: 2.4rem;
+  line-height: 1.25;
+  margin-bottom: 24px;
+}
+.hero-left .highlight {
+  color: #10b981; /* green accent for emphasis */
+  font-weight: 700;
+}
+.hero-left .emoji {
+  font-size: 2rem;
+}
+.hero-left p {
+  font-size: 1.1rem;
+  margin-bottom: 32px;
+  max-width: 500px;
+  color: #e4e4e7;
+}
+.buttons {
+  display: flex;
+  gap: 16px;
+}
+.cta {
+  display: inline-block;
+  font-weight: 700;
+  text-decoration: none;
+  padding: 12px 20px;
+  border-radius: 4px;
+  font-size: 0.95rem;
+}
+.signup-cta {
+  background: #22c55e; /* bright green */
+  color: #000000;
+}
+.signup-cta:hover {
+  background: #16a34a;
+}
+.learnmore-cta {
+  background: transparent;
+  color: #ffffff;
+  border: 1px solid #3f3f46;
+}
+.learnmore-cta:hover {
+  background: #1f2937;
+}
+
+.hero-right {
+  flex: 1 1 40%;
+  display: flex;
+  justify-content: flex-end;
+}
+.hero-right img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+/* Bottom informational strip */
+.bottom-strip {
+  display: flex;
+  background: #0e1117;
+  color: #d4d4d8;
+  font-size: 0.95rem;
+}
+.strip-item {
+  flex: 1;
+  padding: 18px;
+  text-align: center;
+  border-right: 1px solid #1f2937;
+}
+.strip-item:last-child {
+  border-right: none;
+}
+.strip-item strong {
+  color: #ffffff;
+  font-weight: 700;
+}
+.strip-item span {
+  color: #9ca3af;
+}
